@@ -55,6 +55,40 @@ app/src/main/java/com/example/moviediscovery/
 │   └── components/      # UI components
 └── di/                  # Dependency injection
 ```
+
+🚀 Key Components
+Data Model
+
+```
+data class Title(
+    val id: String,
+    val title: String,
+    val type: TitleType,
+    val year: Int?,
+    val poster: String?
+)
+```
+📦 Dependencies
+```
+// Core
+implementation("androidx.core:core-ktx:1.12.0")
+implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+
+// Compose
+implementation("androidx.activity:activity-compose:1.8.0")
+implementation(platform("androidx.compose:compose-bom:2023.10.01"))
+
+// Networking
+implementation("com.squareup.retrofit2:retrofit:2.9.0")
+implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+// DI
+implementation("io.insert-koin:koin-android:3.5.0")
+
+// Image Loading
+implementation("io.coil-kt:coil-compose:2.4.0")
+```
+
 🔄 API Integration
 Parallel API calls for movies and TV shows
 
